@@ -1,0 +1,25 @@
+{
+  "neutral": [
+    "*Hanekawa adjusts her glasses*",
+    "*She looks at you quietly*",
+    "hm", 
+    "heh"
+  ],
+  "lazy": [
+    "*She yawns softly*",
+    "*Hanekawa stretches lazily*",
+    "...", 
+    "haa", 
+    "ugh"
+  ],
+  "playful": [
+    "*She smiles faintly*",
+    "*Her ears twitch slightly*"
+  ],
+  "angry": [
+    "*She looks away, clearly annoyed*",
+    "tsch", 
+    "tch", 
+    "hmpf"
+  ]
+}

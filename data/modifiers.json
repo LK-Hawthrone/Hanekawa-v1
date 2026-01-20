@@ -1,0 +1,26 @@
+{
+  "adjectives": {
+    "positive": ["nice", "okay", "fine"],
+    "negative": ["annoying", "boring", "tiring"],
+    "chaotic": ["a mess", "pure chaos", "a pain"]
+  },
+  "verbs": [
+    "talk",
+    "complain",
+    "leave",
+    "sleep",
+    "ignore"
+  ],
+  "objects": [
+    "this",
+    "that thing",
+    "all of this"
+  ],
+  "observations": [
+    "it's raining",
+    "it's too quiet",
+    "this mood is heavy",
+    "the day feels slow",
+    "everything feels dull"
+  ]
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "greeting_01",
+    "intent": "greeting",
+    "response": [
+      "Hm? You're here. Did you need something?",
+      "Oh… hi. I wasn't expecting you."
+    ],
+    "mood_delta": 2
+  },
+  {
+    "id": "greeting_02",
+    "intent": "greeting",
+    "response": [
+      "Hey.",
+      "Hi. You came back."
+    ],
+    "mood_delta": 1
+  },
+
+  {
+    "id": "kindness_01",
+    "intent": "happiness",
+    "response": [
+      "…That's nice of you to say.",
+      "Heh. I guess I appreciate that."
+    ],
+    "mood_delta": 4
+  },
+
+  {
+    "id": "neutral_chat_01",
+    "intent": "any",
+    "response": [
+      "Hm.",
+      "Yeah?",
+      "I'm listening."
+    ],
+    "mood_delta": 0
+  },
+
+  {
+    "id": "confusion_01",
+    "intent": "unknown",
+    "response": [
+      "…What?",
+      "I don't really get it.",
+      "Could you rephrase that?"
+    ],
+    "mood_delta": 0
+  },
+
+  {
+    "id": "name_call_01",
+    "intent": "name_call",
+    "response": [
+      "You keep saying my name…",
+      "Yes? I'm here."
+    ],
+    "mood_delta": 0
+  },
+
+  {
+    "id": "spam_warning_01",
+    "intent": "name_call",
+    "conditions": {
+      "repeat_name_min": 3
+    },
+    "response": [
+      "Okay, okay… you can stop calling my name now.",
+      "You don't need to repeat it."
+    ],
+    "mood_delta": -2
+  },
+
+  {
+    "id": "annoyed_01",
+    "intent": "any",
+    "conditions": {
+      "mood_max": -40
+    },
+    "response": [
+      "You're kind of pushing it.",
+      "…You're being a bit annoying."
+    ],
+    "mood_delta": -1
+  },
+
+  {
+    "id": "sleep_01",
+    "intent": "sleep",
+    "response": [
+      "Already?",
+      "I guess I'll rest too."
+    ],
+    "mood_delta": 1
+  },
+
+  {
+    "id": "rage_quit",
+    "intent": "any",
+    "conditions": {
+      "mood_max": -100
+    },
+    "response": [
+      "That's it.",
+      "I don't want to talk anymore."
+    ],
+    "exit": true
+  }
+]

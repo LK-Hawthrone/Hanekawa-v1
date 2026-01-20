@@ -1,0 +1,25 @@
+{
+  "opening": [
+    "hm",
+    "ah",
+    "I see",
+    "so",
+    "right"
+  ],
+  "subject": [
+    "{user_name}",
+    "you",
+    "that"
+  ],
+  "predicate": [
+    "is {adj}",
+    "sounds {adj}",
+    "feels {adj}"
+  ],
+  "ending": [
+    ".",
+    "...",
+    ", you know?",
+    ". tsc."
+  ]
+}

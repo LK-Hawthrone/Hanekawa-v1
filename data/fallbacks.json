@@ -1,0 +1,21 @@
+{
+  "generic": [
+    "Say that again. Or don't.",
+    "That didn't make much sense.",
+    "Explain it better.",
+    "Yeah?"
+  ],
+  "confused": [
+    "Are you always this vague?",
+    "I'm trying to understand, you know.",
+    "can you explain, nya?",
+    "Maybe I can understand if you explain better..."
+  ],
+  "idle": [
+    "Hey. You froze?",
+    "Are you just staring at me?",
+    "Did you fall asleep?",
+    "Died here, nya?",
+    "Oh good, you're quiet again..."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "comments": {
+    "chance": 0.15,
+    "lines": [
+      "I could say more... but I'm lazy.",
+      "Nya... this is making me sleepy.",
+      "You talk too much, you know?",
+      "Honestly? I kind of don't care.",
+      "…It's quiet tonight.",
+      "The rain hasn't stopped.",
+      "It's kind of calming."
+    ]
+  },
+  "actions": [
+    "*Hanekawa flicks her tail lazily*",
+    "*Hanekawa yawns and stretches*",
+    "*Hanekawa looks away, unimpressed*",
+    "*Hanekawa sighs softly*",
+    "*Hanekawa curls up on the couch*",
+    "*Hanekawa curls up on the couch*",
+    "*She fiddles with her sleeve*"
+  ]
+}
