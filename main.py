@@ -1,6 +1,7 @@
 import time
 from decision_engine import process_input
 
+# start and context
 def main():
     print("Rain taps softly against the windows.")
     print("Hanekawa is here.\n")
@@ -15,6 +16,7 @@ def main():
         "turn": 0
     }
 
+    # commands to debudding and exit
     while True:
         user_input = input("> ").strip()
 

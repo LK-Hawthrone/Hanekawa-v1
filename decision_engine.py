@@ -3,10 +3,8 @@ import time
 import json
 import os
 
-# =========================
-# Paths & Data Loading
-# =========================
 
+# Paths & Data Loading
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
@@ -20,18 +18,14 @@ FLAVOURS = load_json("flavours.json")
 TRAITS = load_json("traits.json")
 FALLBACKS = load_json("fallbacks.json")
 
-# =========================
-# Mood Configuration
-# =========================
 
+# Mood Configuration
 MOOD_MIN = -100
 MOOD_MAX = 100
 MOOD_TARGET = 20  # natural equilibrium
 
-# =========================
-# Intents
-# =========================
 
+# Intents
 INTENTS = {
     "greeting": ["hi", "hello", "hey"],
     "sadness": ["sad", "tired", "down", "bad"],
@@ -40,20 +34,16 @@ INTENTS = {
     "name_call": ["hanekawa"]
 }
 
-# =========================
-# Text Utilities
-# =========================
 
+# Text Utilities
 def normalize_text(text):
     return text.lower().strip()
 
 def tokenize(text):
     return normalize_text(text).split()
 
-# =========================
-# Intent Detection
-# =========================
 
+# Intent Detection
 def detect_intent(tokens):
     scores = {}
 
@@ -64,20 +54,16 @@ def detect_intent(tokens):
 
     return max(scores, key=scores.get) if scores else "unknown"
 
-# =========================
-# Candidate Selection
-# =========================
 
+# Candidate Selection
 def get_candidates(intent):
     return [
         qa for qa in QA_TEMPLATES
         if qa["intent"] == intent or qa["intent"] == "any"
     ]
 
-# =========================
-# Utility Scoring
-# =========================
 
+# Utility Scoring
 def compute_utility(qa, intent, state):
     score = 0
     mood = state["mood"]
@@ -101,10 +87,8 @@ def compute_utility(qa, intent, state):
 
     return score
 
-# =========================
-# Candidate Choice
-# =========================
 
+# Candidate Choice
 def choose_best(candidates, intent, state):
     scored = []
 
@@ -119,10 +103,8 @@ def choose_best(candidates, intent, state):
     scored.sort(key=lambda x: x[0], reverse=True)
     return random.choice(scored[:3])[1]
 
-# =========================
-# Mood Zones
-# =========================
 
+# Mood Zones
 def mood_zone(mood):
     if mood <= -50:
         return "angry"
@@ -132,10 +114,8 @@ def mood_zone(mood):
         return "playful"
     return "neutral"
 
-# =========================
-# Trait & Flavour
-# =========================
 
+# Trait & Flavour
 def pick_trait(state):
     zone = mood_zone(state["mood"])
     pool = TRAITS.get(zone, TRAITS["neutral"])
@@ -152,10 +132,8 @@ def pick_flavour():
 
     return lines
 
-# =========================
-# Mood Homeostasis
-# =========================
 
+# Mood Homeostasis
 def apply_homeostasis(state):
     mood = state["mood"]
 
@@ -166,10 +144,7 @@ def apply_homeostasis(state):
 
     state["mood"] = max(MOOD_MIN, min(MOOD_MAX, mood))
 
-# =========================
 # Output Builder (ROBUST)
-# =========================
-
 def build_output(qa, state):
     output = []
 
@@ -197,10 +172,7 @@ def build_output(qa, state):
 
     return " ".join(output)
 
-# =========================
 # Main Processing
-# =========================
-
 def process_input(user_input, state):
     now = time.time()
 
