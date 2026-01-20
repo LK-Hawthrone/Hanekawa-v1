@@ -22,6 +22,7 @@ This project favors:
 - Control over opacity
 - Explainability over magic
 - Behavior over realism
+- High flexibility with Low human efforts
 
 ## Disclaimer!
 
